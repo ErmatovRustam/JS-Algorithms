@@ -25,12 +25,12 @@ linearSearch([34,51,1,2,3,45,56,687], 100)
 */
 
 function binarySearch(arr, val){
-    let l = 0;
+    let left = 0;
     let right = arr.length;
-    let mid = Math.floor((right + l) / 2);
-    while(l <= right && arr[mid] !== val){
+    let mid = Math.floor((right + left) / 2);
+    while(left <= right && arr[mid] !== val){
         if(arr[mid] > val) right = arr[mid] - 1;
-        else if (arr[mid] < val){l = arr[mid] + 1};
+        else if(arr[mid] < val){left = arr[mid] + 1};
         mid = Math.floor((right + l) / 2);
     }
     return arr[mid] === val ? mid : -1;
